@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/static/css/main.e2cc4ff1.css",
+    "main.js": "/static/js/main.e6138841.js",
+    "static/js/787.e9d6ef23.chunk.js": "/static/js/787.e9d6ef23.chunk.js",
+    "static/media/QGPhone.svg": "/static/media/QGPhone.3eda9d3e51a74e732e794519bfff3079.svg",
+    "index.html": "/index.html",
+    "static/media/info.svg": "/static/media/info.0c058a4c7d1bbb875ff4c89a5aa07ce5.svg",
+    "main.e2cc4ff1.css.map": "/static/css/main.e2cc4ff1.css.map",
+    "main.e6138841.js.map": "/static/js/main.e6138841.js.map",
+    "787.e9d6ef23.chunk.js.map": "/static/js/787.e9d6ef23.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e2cc4ff1.css",
+    "static/js/main.e6138841.js"
+  ]
+}
