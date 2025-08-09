@@ -6,14 +6,13 @@ const QuoteGeneratorPhone = () => {
 
     const quote = useRef();
     const sign = useRef();
- 
+
 
     const myQuote = useSelector(state => state.quote);
     const signature = useSelector(state => state.signature);
 
 
-    const quoteAndSignDispatcher = useDispatch();
-    const displayQuoteDispatcher = useDispatch();
+    const dispatch = useDispatch();
 
     
 
@@ -41,12 +40,12 @@ const QuoteGeneratorPhone = () => {
 
                 () => {
 
-                    quoteAndSignDispatcher(actions.setQuoteAndSign({
+                    dispatch(actions.setQuoteAndSign({
                         quote: quote.current.value,
                         signature: sign.current.value
                     }));
-                   
-                    displayQuoteDispatcher(actions.showQuote());
+
+                    dispatch(actions.showQuote());
                 }
 
 

@@ -13,8 +13,7 @@ const QuoteGeneratorPC = () => {
     const signature = useSelector(state => state.signature);
 
 
-    const quoteAndSignDispatcher = useDispatch();
-    const displayQuoteDispatcher = useDispatch();
+    const dispatch = useDispatch();
 
     return (<div style={{ margin: 'auto', maxWidth: '40%', minHeight: '40%', backgroundImage: `url(${bg})`, backgroundSize: 'cover' }}
         className=" w3-container w3-card-4 w3-round-xlarge">
@@ -34,12 +33,12 @@ const QuoteGeneratorPC = () => {
 
                     () => {
 
-                        quoteAndSignDispatcher(actions.setQuoteAndSign({
+                        dispatch(actions.setQuoteAndSign({
                             quote: quote.current.value,
                             signature: sign.current.value
                         }));
 
-                        displayQuoteDispatcher(actions.showQuote());
+                        dispatch(actions.showQuote());
                     }
 
 
