@@ -1,18 +1,14 @@
-
 import bg from '../Assets/QGPhone.svg';
-import html2canvas from 'html2canvas';
-import { useDispatch, useSelector } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import { useRef } from 'react';
 import { actions } from '../utils/Store';
 import QuotePhone from './QuotePhone';
-import domtoimage from 'dom-to-image';
 import QuoteCanvas from './QuoteCanvas';
 
 const QuoteHolderPhone = () => {
 
     const storeDispatcher = useDispatch();
     const quoteRef = useRef(null);
-    const color = useSelector(state => state.color);
 
     const downloadPhone = () => {
 

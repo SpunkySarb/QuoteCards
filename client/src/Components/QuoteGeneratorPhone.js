@@ -1,4 +1,4 @@
-import { useRef, useState } from 'react';
+import { useRef } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import bg from '../Assets/QGPhone.svg';
 import { actions } from '../utils/Store';
