@@ -1,7 +1,6 @@
 
 import bg from '../Assets/QGPhone.svg';
 import Quote from './Quote';
-import html2canvas from 'html2canvas';
 import { useDispatch } from 'react-redux';
 import { actions } from '../utils/Store';
 import QuoteCanvasPC from './QuoteCanvasPC';
@@ -15,17 +14,11 @@ const QuoteHolder = () => {
 
 
     const download = () => {
-
-     //  html2canvas(document.querySelector('#myQuote')).then((canvas) => {
-
-
-
-        let anchor = document.createElement('a');
+        // Export the quote canvas directly to a PNG image
+        const anchor = document.createElement('a');
         anchor.href = document.querySelector("#quoteCanvasPC").toDataURL('image/png');
         anchor.download = 'image.png';
         anchor.click();
-
-     //   })
     }
 
 
