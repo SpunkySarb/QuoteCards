@@ -21,7 +21,9 @@ const QuoteCanvasPC = () => {
 
         setDimentions({ width: divQuote.offsetWidth, height: divQuote.offsetHeight  });
 
-        console.log(divQuote.width, "  ", divQuote.height)
+        if (process.env.NODE_ENV !== 'production') {
+            console.log(divQuote.width, "  ", divQuote.height);
+        }
 
         const canvas = quote.current;
 
