@@ -2,6 +2,7 @@
 import bg from '../Assets/QGPhone.svg';
 import Quote from './Quote';
 import { useDispatch } from 'react-redux';
+import { useRef } from 'react';
 import { actions } from '../utils/Store';
 import QuoteCanvasPC from './QuoteCanvasPC';
 
@@ -9,8 +10,8 @@ const QuoteHolder = () => {
 
 
     const storeDispatcher = useDispatch();
-     
-    
+    const quoteRef = useRef(null);
+
 
 
     const download = () => {
@@ -31,7 +32,7 @@ const QuoteHolder = () => {
         className=" w3-container w3-card-4 w3-round-xlarge">
         <br />
 
-        <Quote/> <QuoteCanvasPC/>
+        <Quote quoteRef={quoteRef} /> <QuoteCanvasPC containerRef={quoteRef} />
 
         <div style={{ fontFamily: 'Inder', width: '90%', margin: '0 auto' }} className="w3-bar">
             <br />
@@ -51,3 +52,4 @@ const QuoteHolder = () => {
 
 
 export default QuoteHolder;
+

@@ -1,9 +1,8 @@
-import { useEffect } from "react";
 import { useSelector } from "react-redux";
 import fonts from "../utils/fonts";
 
 
-const QuotePhone = () => {
+const QuotePhone = ({ quoteRef }) => {
 
     const color = useSelector(state => state.color);
 
@@ -24,7 +23,7 @@ const QuotePhone = () => {
 
 
 
-  return (<div id="myQuotePhone" style={{
+  return (<div ref={quoteRef} id="myQuotePhone" style={{
         backgroundColor: color, color: fontColor,
         fontFamily: fontStyle, width: '90vw', minHeight: 'auto', margin: 'auto'
     }} className=" slide-in-bottom   w3-center  ">

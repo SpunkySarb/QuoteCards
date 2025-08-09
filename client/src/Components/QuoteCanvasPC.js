@@ -3,7 +3,7 @@ import { useSelector } from "react-redux";
 import canvasTxt from 'canvas-txt';
 
 
-const QuoteCanvasPC = () => {
+const QuoteCanvasPC = ({ containerRef }) => {
 
     const color = useSelector(state => state.color);
     const fontColor = useSelector(state => state.fontColor);
@@ -17,11 +17,10 @@ const QuoteCanvasPC = () => {
     useEffect(() => {
 
 
-        const divQuote = document.getElementById('myQuote');
-
-        setDimentions({ width: divQuote.offsetWidth, height: divQuote.offsetHeight  });
-
-        console.log(divQuote.width, "  ", divQuote.height)
+        if (containerRef.current) {
+            setDimentions({ width: containerRef.current.offsetWidth, height: containerRef.current.offsetHeight  });
+            console.log(containerRef.current.offsetWidth, "  ", containerRef.current.offsetHeight)
+        }
 
         const canvas = quote.current;
 
@@ -55,7 +54,7 @@ const QuoteCanvasPC = () => {
 
 
 
-    }, [color, fontStyle, fontColor, canvasDimentions]);
+    }, [color, fontStyle, fontColor, canvasDimentions, containerRef]);
 
 
 
